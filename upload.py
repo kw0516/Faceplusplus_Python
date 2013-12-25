@@ -25,10 +25,10 @@ result = api.detection.detect(img = File(r'F:\AI\TestPhoto\111180.jpg'), mode = 
 print_result('Detection result for {}:'.format('blue'), result)
 face_id=result['face'][0]['face_id']
 api.person.create(person_name = u'Name',
-                  face_id = face_id,tag=u'��ǩ',
-                  group_name = u'Ⱥ��')
+                  face_id = face_id,tag=u'自定义标签',
+                  group_name = u'群组名称)
 
-result = api.recognition.train(group_name = u'Ⱥ��', type = 'all')
+result = api.recognition.train(group_name = u'Ⱥ��', type = 'all')
 
 print_result('Train result:', result)
 
